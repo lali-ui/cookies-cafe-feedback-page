@@ -1,64 +1,142 @@
-body {
+*{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+}
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    background: linear-gradient(45deg, #fec77f, #f09d69);
+    overflow: hidden;
+}
+.card {
+   position: relative;
+   background: #ffffff;
+   padding: 25px 50px 50px ;
+   border-radius: 25px;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+   
+}
+.cookies-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   
+}
+.cookie {
+    position: absolute;
+    font-size: 25px;
+    opacity: 0.8;
+    animation: floatCookies 5s infinite ease-in-out, spinCookies 4s infinite linear;
+}
+@keyframes floatCookies {
+    0% { transform: translateY(0px); opacity: 1; }
+    50% { transform: translateY(-10px); opacity: 0.9; }
+    100% { transform: translateY(0px); opacity: 1; }
 }
 
-.feedback-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.cookie:nth-child(1) { top: 10%; left: 50%; font-size: 30px; animation-duration: 6s, 5s; }
+.cookie:nth-child(2) { top: 60%; left: 12%; font-size: 25px; animation-duration: 4s, 3s; }
+.cookie:nth-child(3) { top: 76%; left: 40%; font-size: 20px; animation-duration: 5s, 4s; }
+.cookie:nth-child(4) { top: 15%; left: 30%; font-size: 35px; animation-duration: 6s, 5s; }
+.cookie:nth-child(6) { top: 20%; left: 80%; font-size: 28px; animation-duration: 6s, 5s; }
+.cookie:nth-child(7) { top: 50%; left: 90%; font-size: 22px; animation-duration: 4s, 3s; }
+.cookie:nth-child(8) { top: 85%; left: 15%; font-size: 30px; animation-duration: 5s, 4s; }
+.cookie:nth-child(9) { top: 90%; left: 34%; font-size: 34px; animation-duration: 5s, 4s; }
+.cookie:nth-child(10) { top: 40%; left: 10%; font-size: 34px; animation-duration: 5s, 4s; }
+.cookie:nth-child(11) { top: 90%; left: 75%; font-size: 20px; animation-duration: 5s, 4s; }
+
+.card header{
+    font-size: 25px;
+    color: #be7735;
+    font-weight: bold;
+    margin-left: 55px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.center{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+}
+.stars {
+   margin: 0px;
+}
+.center .stars{
+    height: 150px;
     width: 300px;
     text-align: center;
 }
+.stars input{
+    display: none;
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
 }
-
-.rating {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+.stars label {
+    float: right;
+    font-size: 50px;
+    color: lightgray;
+    margin: 0 5px;
+    text-shadow: 1px 1px #bbb;
 }
-
-input[type="radio"] {
+.stars label::before{
+    content: '★';
+}
+.stars input:checked ~ label{
+    color: gold;
+    text-shadow: 1px 1px #c60;
+}
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label{
+    color: gold;
+    text-shadow: 1px 1px goldenrod;
+}
+.stars .result::before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 120px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #be7735;
+    font-family: Arial, Helvetica, sans-serif;
     display: none;
 }
-
-.star {
-    font-size: 30px;
-    color: #ccc;
-    cursor: pointer;
+.stars input:checked ~ .result:before {
+    display: block;
+}
+.stars #five:checked ~ .result:before {
+    content: "I love it 😍";
+}
+.stars #four:checked ~ .result:before {
+    content: "I like it 😎";
+}
+.stars #three:checked ~ .result:before {
+    content: "It's good 😄";
+}
+.stars #two:checked ~ .result:before {
+    content: "I don't like it 😒";
+}
+.stars #one:checked ~ .result:before {
+    content: "I hate it 😠";
 }
 
-input[type="radio"]:checked ~ .star {
-    color: gold;
-}
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
+.submit-button {
+    display: block;
+    margin: 130px auto 0;
+    padding: 10px 20px;
+    font-size: 18px;
     border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
+    border-radius: 10px;
+    background-color: #be7735;
+    color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
-
-button:hover {
-    background-color: #45a049;
+.submit-button:hover {
+    background-color: #e68a33;
 }

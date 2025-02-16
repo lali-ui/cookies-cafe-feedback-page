@@ -1,31 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cookies.css">
     <title>Feedback</title>
 </head>
-<body>
-    <div class="feedback-container">
-        <h1>Rate Our Cookies!</h1>
-        <form id="feedback-form">
-            <label for="rating">Rate us (1-5):</label>
-            <div class="rating">
-                <input type="radio" id="star1" name="rating" value="5" required>
-                <label for="star1" class="star">★</label>
-                <input type="radio" id="star2" name="rating" value="4">
-                <label for="star2" class="star">★</label>
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3" class="star">★</label>
-                <input type="radio" id="star4" name="rating" value="2">
-                <label for="star4" class="star">★</label>
-                <input type="radio" id="star5" name="rating" value="1">
-                <label for="star5" class="star">★</label>
+    <body>
+        <div class="cookies-container">
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+            <span class="cookie">🍪</span>
+        </div>
+            <div class="card">
+                
+                <header>How was your experience?</header>
+                <div class="stars">
+                    <input type="radio" id="five" name="rate"value="5">
+                    <label for="five"></label>
+        
+                    <input type="radio" id="four" name="rate"value="4">
+                    <label for="four"></label>
+        
+                    <input type="radio" id="three" name="rate"value="3">
+                    <label for="three"></label>
+        
+                    <input type="radio" id="two" name="rate"value="2">
+                    <label for="two"></label>
+        
+                    <input type="radio" id="one" name="rate"value="1">
+                    <label for="one"></label>
+                    <span class="result"></span>
+                </div>
+                    <button class="submit-button">Submit</button>
             </div>
-            <textarea id="review" name="review" placeholder="Leave your review here..." rows="4"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</body>
+            
+   </body>
 </html>
