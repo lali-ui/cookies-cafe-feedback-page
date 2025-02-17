@@ -2,22 +2,29 @@
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(45deg, #fec77f, #f09d69);
+    background: linear-gradient(35deg, #dba156, #814f2f);
     overflow: hidden;
+    text-align: center;
 }
+
 .card {
    position: relative;
    background: #ffffff;
    padding: 25px 50px 50px ;
    border-radius: 25px;
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+   box-shadow: 0 5px 10px rgba(0, 1, 0, 0.5);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
    
 }
 .cookies-container {
@@ -34,26 +41,26 @@ body {
 }
 @keyframes floatCookies {
     0% { transform: translateY(0px); opacity: 1; }
-    50% { transform: translateY(-10px); opacity: 0.9; }
+    50% { transform: translateY(-20px); opacity: 0.9; }
     100% { transform: translateY(0px); opacity: 1; }
 }
 
-.cookie:nth-child(1) { top: 10%; left: 50%; font-size: 30px; animation-duration: 6s, 5s; }
-.cookie:nth-child(2) { top: 60%; left: 12%; font-size: 25px; animation-duration: 4s, 3s; }
-.cookie:nth-child(3) { top: 76%; left: 40%; font-size: 20px; animation-duration: 5s, 4s; }
-.cookie:nth-child(4) { top: 15%; left: 30%; font-size: 35px; animation-duration: 6s, 5s; }
-.cookie:nth-child(6) { top: 20%; left: 80%; font-size: 28px; animation-duration: 6s, 5s; }
-.cookie:nth-child(7) { top: 50%; left: 90%; font-size: 22px; animation-duration: 4s, 3s; }
+.cookie:nth-child(1) { top: 10%; left: 10%; font-size: 20px; animation-duration: 6s, 5s; }
+.cookie:nth-child(2) { top: 60%; left: 12%; font-size: 50px; animation-duration: 4s, 3s; }
+.cookie:nth-child(3) { top: 76%; left: 40%; font-size: 30px; animation-duration: 5s, 4s; }
+.cookie:nth-child(4) { top: 15%; left: 30%; font-size: 50px; animation-duration: 6s, 5s; }
+.cookie:nth-child(6) { top: 20%; left: 80%; font-size: 73px; animation-duration: 7s, 5s; }
+.cookie:nth-child(7) { top: 50%; left: 90%; font-size: 35px; animation-duration: 4s, 6s; }
 .cookie:nth-child(8) { top: 85%; left: 15%; font-size: 30px; animation-duration: 5s, 4s; }
 .cookie:nth-child(9) { top: 90%; left: 34%; font-size: 34px; animation-duration: 5s, 4s; }
-.cookie:nth-child(10) { top: 40%; left: 10%; font-size: 34px; animation-duration: 5s, 4s; }
-.cookie:nth-child(11) { top: 90%; left: 75%; font-size: 20px; animation-duration: 5s, 4s; }
+.cookie:nth-child(10) { top: 40%; left: 10%; font-size: 33px; animation-duration: 5s, 6s; }
+.cookie:nth-child(11) { top: 90%; left: 75%; font-size: 40px; animation-duration: 8s, 4s; }
 
 .card header{
     font-size: 25px;
     color: #be7735;
     font-weight: bold;
-    margin-left: 55px;
+    margin-left: 20px;
     margin-bottom: 0px;
     margin-top: 10px;
 }
@@ -62,9 +69,11 @@ body {
     top: 45%;
     left: 50%;
     transform: translate(-100%, -100%);
+    
 }
 .stars {
    margin: 0px;
+   
 }
 .center .stars{
     height: 150px;
@@ -101,19 +110,19 @@ body {
     transform: translateX(-50%);
     bottom: 120px;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 600;
     color: #be7735;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: none;
 }
 .stars input:checked ~ .result:before {
     display: block;
 }
 .stars #five:checked ~ .result:before {
-    content: "I love it 😍";
+    content: "I loved it 😍";
 }
 .stars #four:checked ~ .result:before {
-    content: "I like it 😎";
+    content: "I liked it 😎";
 }
 .stars #three:checked ~ .result:before {
     content: "It's good 😄";
@@ -122,20 +131,23 @@ body {
     content: "I don't like it 😒";
 }
 .stars #one:checked ~ .result:before {
-    content: "I hate it 😠";
+    content: "I hated it 😠";
 }
 
 .submit-button {
     display: block;
-    margin: 130px auto 0;
-    padding: 10px 20px;
+    margin-top: 50px;
+    margin-left: -10px;
+    padding: 10px 20px ;
     font-size: 18px;
+    font-weight: 600;
     border: none;
     border-radius: 10px;
     background-color: #be7735;
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    text-align: center;
 }
 .submit-button:hover {
     background-color: #e68a33;
